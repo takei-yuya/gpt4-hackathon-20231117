@@ -1,10 +1,11 @@
 #!/bin/bash
 
-set -ex
+set -uex
 
 . .env
 
 mkdir -p output
+convert "${1}" -resize "512x512^" -gravity center +repage cropped.png
 cp cropped.png output/image_0.png
 declare -i i=0
 for mask in $(ls -1 masks/mask_*_*.png | sort -R); do
