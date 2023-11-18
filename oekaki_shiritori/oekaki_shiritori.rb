@@ -23,6 +23,7 @@ class IllustrationChainer
   あなたはお絵描きしりとりの対戦者です。
   ユーザから単語がひとつ入力されます。
   入力の単語に対ししりとりが成立する次の単語を考え、その次の単語を英訳しつつ、日本語とふりがなと英訳された単語から画像を生成します。
+  ただし、ユーザからの単語が「ん」で終わる場合、一文字前の文字を利用します。
   HERE
 
   GET_NEXT_WORD_FUNCTIONS = [
@@ -46,6 +47,13 @@ class IllustrationChainer
   ただし、単語の先頭は「%s」ではじまっている可能性が高く、単語の長さはひらがなで%d文字の単語です。
   必ず、ひらがな一単語で答えてください。
   HERE
+
+  IMAGE_GENERATE_PROMPT = <<-HERE
+  Hand drawn with mouse, black-and-white line drawing of "%s"
+  HERE
+  # IMAGE_GENERATE_PROMPT = <<-HERE
+  # Illustration of %s
+  # HERE
 
   def initialize(chat_client, dalle_client, vision_client)
     @chat_client = chat_client
@@ -132,7 +140,7 @@ class IllustrationChainer
   def convert_word_to_image(obj)
     puts "画像を生成しています..."
     english_word = obj['english_word']
-    url = @dalle_client.image_generations('Hand drawn with mouse, black-and-white line drawing of %s' % english_word, size: '256x256')
+    url = @dalle_client.image_generations(IMAGE_GENERATE_PROMPT % english_word, size: '256x256')
     obj.update(url: url)
   end
 

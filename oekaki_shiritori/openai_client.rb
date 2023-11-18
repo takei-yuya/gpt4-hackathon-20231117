@@ -82,7 +82,6 @@ class OpenAiClient < Client
   end
 
   def image_generations(prompt, options = {})
-    p @base_headers
     path = '/v1/images/generations'
     req = options.merge({
       model: 'dall-e-2',
