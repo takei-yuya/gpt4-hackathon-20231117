@@ -35,3 +35,5 @@ Enterを連打してください。 (か、 244行目、250行目、253行目あ
 
 https://ja.wikipedia.org/wiki/テセウスの船 を元にした一発ネタです。
 詳しくはあとで公開する note をご参照ください。
+
+「[いらすとや](https://www.irasutoya.com/)」さんの「[豪華客船・フェリーのイラスト](https://www.irasutoya.com/2013/05/blog-post_3676.html)」を例にした実行例を `ship.gif` においています。
