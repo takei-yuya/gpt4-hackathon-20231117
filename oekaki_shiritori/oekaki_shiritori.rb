@@ -7,7 +7,7 @@ require 'net/https'
 require 'json'
 require_relative 'openai_client'
 
-# Azure OpenAI Service の予算の方が余っているのでAzure側を使いたいが、
+# Microsoft for Statups で Azure OpenAI Service APIが使えるのでできればそちらを使いたいが、
 # USリージョンではGPT-4モデルがまだデプロイできず、JPリージョンでは画像生成がまだ使えず、
 # 全リージョンでまだVISION APIが使えない
 # そのため、APIをはしごすることになってしまっている……。
