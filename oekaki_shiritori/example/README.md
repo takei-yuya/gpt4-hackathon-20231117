@@ -4,6 +4,14 @@
 markdownで見やすいようサイズを256x256以下にリサイズ。
 実行時は [いらすとや](https://www.irasutoya.com)の画像リンクを直接利用したため、リポジトリ上の画像とは異なるものを利用しています。
 
+引用元URL
+- https://www.irasutoya.com/2020/09/blog-post_808.html (丸いスイカのイラスト)
+- https://www.irasutoya.com/2018/06/blog-post_917.html (ランニングマシンで走る人のイラスト（男性）)
+- https://www.irasutoya.com/2017/03/blog-post_718.html (ヌートリアのイラスト)
+- https://www.irasutoya.com/2014/02/blog-post_7287.html (オオカミのイラスト)
+- https://www.irasutoya.com/2014/02/blog-post_28.html (考える人のイラスト)
+
+
 ![すいか](send_01.png)
 ユーザの想定「すいか」 GPTの解釈「すいか」
 
